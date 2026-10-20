@@ -16,16 +16,17 @@
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            font-family: Georgia, sherif;
         }
         /* THREE-COLUMN LAYOUT */
         .columns {
             display: grid;
-            grid-template-columns: 2fr 1.25fr 1fr
+            grid-template-columns: 2fr 1.25fr 1fr;
             gap: 18px;
             width: calc(100% - 48px);
             max-width: 1400px;
             margin: 40px auto;
-            align-items: start;
+            align-items: stretch;
         }
         /* INDIVIDUAL PAPER COLUMNS */
         .column {
@@ -36,6 +37,7 @@
             background-image: IMG_1823.jpeg;
             background-size: 100% 100%;
             background-position: centre;
+            background-repeat: no-repeat;
         }
         /* SMALLER SCREENS */
         @media (max-width: 700px) {
@@ -49,15 +51,25 @@
             .column {
                 min-height: 400px;
             }
+        }
     </style>
 </head>
 
 <body>
     <main class="columns">
 
-        <section class="column">Left column </section>
-        <section class="column">Middle column</section>
-        <section class="column">Right column</section>
+        <section class="column">
+            <h2>LEFT COLUMN</h2>
+        </section>
+
+        <section class="column">
+            <h2>MIDDLE COLUMN</h2>
+        </section>
+
+        <section class="column">
+            <h2>RIGHT COLUMN</h2>
+        </section>
+
     </main>
 </body>
 </html>
