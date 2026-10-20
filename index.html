@@ -36,9 +36,35 @@
             background-image: IMG_1823.jpeg;
             background-size: 100% 100%;
             background-position: centre;
+        }
+        /* SMALLER SCREENS */
+        @media (max-width: 700px) {
+            .columns {
+                grid-template-columns: 1fr;
+                width: calc(100% - 32px);
+                gap: 16px;
+                margin: 24px auto;
+            }
+
+            .column {
+                min-height: 400px;
+            }
     </style>
 </head>
 
 <body>
+    <main class="columns">
+
+        <section class="column left">
+            <!-- Your largest paper column -->
+        </section>
+
+        <section class="column middle">
+            <!-- Your medium paper column -->
+        </section>
+
+        <section class="column right">
+            <!-- Your narrowest paper column -->
+        </section>
 </body>
 </html>
