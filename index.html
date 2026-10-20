@@ -23,10 +23,11 @@
             margin-top: 0;
             display: grid;
             grid-template-columns: 2fr 1.25fr 1fr;
-            gap: 18px;
+            gap: 2px;
             width: calc(100% - 48px);
             max-width: 1050px;
-            margin: 40px auto;
+            padding: 0;
+            margin: 12px auto 0;
             align-items: stretch;
         }
 
@@ -34,13 +35,13 @@
         .column {
             box-sizing: border-box;
             min-width: 0;
-            min-height: 850px;
+            min-height: 1100px;
             padding: 24px;
 
             background-color: transparent;
             background-image: url("Firefly_RemoveBackground.png");
             background-size: 100% 100%;
-            background-position: center;
+            background-position: top center;
             background-repeat: no-repeat;
             border: none;
             colour: #38271F
@@ -68,17 +69,20 @@
             }
         }
         
-/* PUBLICATION MASTHEAD */
+/* MASTHEAD */
 .masthead {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #FFFFFF;
     text-align: center;
     color: #FFFFFF;
-    padding: 35px 16px 24px;
+    padding: 35px 24px 12px;
 }
 
-/* LARGE CURSIVE TITLE */
+/* MASTHEAD LARGE CURSIVE TITLE */
 .masthead h1 {
     font-family: "Brush Script MT", "Segoe Script", cursive;
     font-size: clamp(48px, 8vw, 88px);
@@ -88,11 +92,13 @@
     color: #FFFFFF;
 }
 
-/* SMALL BLOCK LETTERS */
+/*MASTHEAD SMALL BLOCK LETTERS */
 .masthead .tagline,
 .masthead .ownership {
     font-family: Georgia, serif;
+    display: block;
     font-size: 11px;
+    font-weight: normal;
     letter-spacing: 3px;
     line-height: 1.8;
     margin: 5px 0;
