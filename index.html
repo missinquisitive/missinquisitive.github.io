@@ -38,7 +38,7 @@
             padding: 24px;
 
             background-color: #E9DCC2;
-            background-image: url("Firefly.png");
+            background-image: url("Firefly_RemoveBackground.png");
             background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -94,6 +94,117 @@
     color: #FFFFFF;
     text-transform: uppercase;
 }
+        
+/* The music widget itself */
+.music-widget {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 16px 12px;
+
+    /* Replace this filename with your widget background */
+    background-image: url("Firefly.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #78564B;
+    text-align: center;
+}
+
+/* Small, elegant heading */
+.music-widget h2 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #78564B;
+    margin: 0 0 12px;
+}
+
+/* The violin photograph */
+.listening-image {
+    display: block;
+    width: 100%;
+    max-width: 145px;
+    height: 115px;
+    object-fit: cover;
+    margin: 0 auto 12px;
+}
+
+/* Artist name */
+.music-widget h3 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #49352D;
+    margin: 0 0 4px;
+}
+
+/* Song title */
+.song-title {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #78564B;
+    margin: 0 0 12px;
+}
+
+/* Previous, play and next buttons */
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0 12px;
+}
+
+.music-controls button {
+    border: none;
+    background: transparent;
+    color: #78564B;
+    font-size: 19px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.music-controls button:nth-child(2) {
+    font-size: 27px;
+}
+
+/* Song progress line */
+.progress-area {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: Georgia, serif;
+    font-size: 9px;
+    color: #78564B;
+}
+
+.progress-track {
+    flex: 1;
+    height: 3px;
+    background: #C6B39A;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #78564B;
+}
+
+/* Small label at the bottom */
+.on-repeat {
+    font-family: Georgia, serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #78564B;
+    margin: 14px 0 0;
+}
+
     </style>
 </head>
 
@@ -115,17 +226,53 @@
             
         </section>
 
-        <section class="column listening">
-    <h2>Listening This Week</h2>
+        
+<section class="column listening">
 
-    <img
-        src="IMG_1818.jpeg"
-        alt="Violin"
-        class="listening-image"
-    >
+    <div class="music-widget">
 
-    <h3>Lana Del Rey</h3>
+        <h2>Listening This Week</h2>
+
+        <img
+            src="IMG_1818.jpeg"
+            alt="A violin"
+            class="listening-image"
+        >
+
+        <h3>Lana Del Rey</h3>
+
+        <p class="song-title">Blue Banisters</p>
+
+        <div class="music-controls">
+
+            <button type="button" aria-label="Previous song">
+                &#9198;
+            </button>
+
+            <button type="button" aria-label="Play or pause">
+                &#9654;
+            </button>
+
+            <button type="button" aria-label="Next song">
+                &#9197;
+            </button>
+
+        </div>
+
+        <div class="progress-area">
+            <span>0:00</span>
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+            <span>0:00</span>
+        </div>
+
+        <p class="on-repeat">ON REPEAT</p>
+
+    </div>
+
 </section>
+
 
     </main>
 
