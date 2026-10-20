@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Miss Inquisitive</title>
 
     <style>
-        /* BASIC PAGE SETTINGS */
+        /* 1. THE PAGE BACKGROUND */
         body {
             margin: 0;
             min-height: 100vh;
-            background-image: url("IMG_1817.jpeg");
+            background-color: #302019;
+            background-image: url("image1817.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: Georgia, sherif;
+            font-family: Georgia, serif;
         }
-        /* THREE-COLUMN LAYOUT */
+
+        /* 2. THE THREE-COLUMN LAYOUT */
         .columns {
             display: grid;
             grid-template-columns: 2fr 1.25fr 1fr;
@@ -28,24 +30,37 @@
             margin: 40px auto;
             align-items: stretch;
         }
-        /* INDIVIDUAL PAPER COLUMNS */
+
+        /* 3. THE SHARED PAPER STYLE */
         .column {
+            box-sizing: border-box;
             min-width: 0;
             min-height: 700px;
             padding: 24px;
-            box-sizing: border-box;
-            background-image: IMG_1823.jpeg;
+
+            background-color: #E9DCC2;
+            background-image: url("image1823.jpg");
             background-size: 100% 100%;
-            background-position: centre;
+            background-position: center;
             background-repeat: no-repeat;
+
+            border: 2px solid white;
+            color: #38271F;
         }
-        /* SMALLER SCREENS */
+
+        /* 4. TEMPORARY LABELS FOR OUR TEST */
+        .column h2 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* 5. SMALL-SCREEN LAYOUT */
         @media (max-width: 700px) {
             .columns {
                 grid-template-columns: 1fr;
                 width: calc(100% - 32px);
-                gap: 16px;
                 margin: 24px auto;
+                gap: 16px;
             }
 
             .column {
@@ -56,6 +71,7 @@
 </head>
 
 <body>
+
     <main class="columns">
 
         <section class="column">
@@ -71,5 +87,6 @@
         </section>
 
     </main>
+
 </body>
 </html>
