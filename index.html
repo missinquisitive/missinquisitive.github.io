@@ -67,23 +67,58 @@
                 min-height: 400px;
             }
         }
+        
+/* PUBLICATION MASTHEAD */
+.masthead {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 35px 16px 24px;
+}
+
+/* LARGE CURSIVE TITLE */
+.masthead h1 {
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: clamp(48px, 8vw, 88px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    color: #FFFFFF;
+}
+
+/* SMALL BLOCK LETTERS */
+.masthead .tagline,
+.masthead .ownership {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    margin: 5px 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
     </style>
 </head>
 
 <body>
+    
+<header class="masthead">
+    <h1>Miss Inquisitive</h1>
+    <p class="tagline">A LITTLE INTERNET PUBLICATION</p>
+    <p class="ownership">PROPERTY OF MISS AISHA</p>
+</header>
 
     <main class="columns">
 
         <section class="column">
-            <h2>LEFT COLUMN</h2>
+    
         </section>
 
         <section class="column">
-            <h2>MIDDLE COLUMN</h2>
+            
         </section>
 
         <section class="column">
-            <h2>RIGHT COLUMN</h2>
+            
         </section>
 
     </main>
