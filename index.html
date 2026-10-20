@@ -7,6 +7,7 @@
     <title>Miss Inquisitive</title>
 
     <style>
+        /* BASIC PAGE SETTINGS */
         body {
             margin: 0;
             min-height: 100vh;
@@ -14,7 +15,27 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
+        /* THREE-COLUMN LAYOUT */
+        .columns {
+            display: grid;
+            grid-template-columns: 2fr 1.25fr 1fr
+            gap: 18px;
+            width: calc(100% - 48px);
+            max-width: 1400px;
+            margin: 40px auto;
+            align-items: start;
+        }
+        /* INDIVIDUAL PAPER COLUMNS */
+        .column {
+            min-width: 0;
+            min-height: 700px;
+            padding: 24px;
+            box-sizing: border-box;
+            background-image: IMG_1823.jpeg;
+            background-size: 100% 100%;
+            background-position: centre;
     </style>
 </head>
 
